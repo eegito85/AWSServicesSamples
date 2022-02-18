@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWS.Services.SimpleEmailNotification", "AWS.Services.SimpleEmailNotification\AWS.Services.SimpleEmailNotification.csproj", "{2208EE27-AE28-4B11-A504-51D7859BE5DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWS.Services.CloudWatch", "AWS.Services.CloudWatch\AWS.Services.CloudWatch.csproj", "{E6EF232F-3B6D-42CE-8154-55917267B551}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2208EE27-AE28-4B11-A504-51D7859BE5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2208EE27-AE28-4B11-A504-51D7859BE5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2208EE27-AE28-4B11-A504-51D7859BE5DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6EF232F-3B6D-42CE-8154-55917267B551}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6EF232F-3B6D-42CE-8154-55917267B551}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6EF232F-3B6D-42CE-8154-55917267B551}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6EF232F-3B6D-42CE-8154-55917267B551}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
