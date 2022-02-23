@@ -1,0 +1,28 @@
+
+{
+    "region" : "sa-east-1",
+    "profile" : "Admin",
+    "configuration" : "Release",
+    "image-tag"     : "awsserviceselasticcontainerservice:latest",
+    "docker-build-working-dir" : "",
+    "cluster"                  : "AwsECSDev",
+    "launch-type"              : "FARGATE",
+    "launch-subnets"           : "subnet-41155127,subnet-0f1a6046,subnet-f5acefae",
+    "launch-security-groups"   : "sg-89c8aac1",
+    "assign-public-ip"         : true,
+    "task-definition-name"     : "AWSServicesElasticContainerService",
+    "task-cpu"                 : "256",
+    "task-memory"              : "512",
+    "platform-version"         : "LATEST",
+    "task-definition-task-role" : "arn:aws:iam::787152564072:role/ecs_execution_AWSServicesElasticContainerService",
+    "task-execution-role"       : "ecs_execution_AWSServicesElasticContainerService",
+    "container-name"            : "AWSServicesElasticContainerService",
+    "container-port-mapping"    : "",
+    "container-environment-variables" : "\"DOTNET_ENVIRONMENT\"=\"Development\"",
+    "skip-image-push"                 : false,
+    "cluster-service"                 : "AWSServicesElasticContainerService",
+    "desired-count"                   : 1,
+    "deployment-minimum-healthy-percent" : 50,
+    "deployment-maximum-percent"         : 200,
+    "vstoolkit-deployment-mode"          : "DeployService"
+}

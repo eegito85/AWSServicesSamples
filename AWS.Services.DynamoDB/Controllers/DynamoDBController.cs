@@ -17,11 +17,11 @@ namespace AWS.Services.DynamoDB.Controllers
         }
 
         [HttpGet("getallmessages")]
-        public async Task<ActionResult> GetAllMessages()
+        public async Task<List<MessageModelDTO>> GetAllMessages()
         {
             var allDocs = await _dynamoDBService.GetAllMessages();
 
-            return Ok(allDocs);
+            return allDocs;
         }
 
         [HttpGet("insertmessages")]

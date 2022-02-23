@@ -1,0 +1,20 @@
+
+{
+    "region" : "sa-east-1",
+    "configuration" : "Release",
+    "framework"     : "net6.0",
+    "self-contained" : true,
+    "application"    : "AWSServicesElasticBeanStalk",
+    "environment"    : "AWSServicesElasticBeanStalk-dev",
+    "enable-xray"    : false,
+    "enhanced-health-type" : "basic",
+    "additional-options"   : "\"aws:autoscaling:launchconfiguration,SecurityGroups\"=\"sg-89c8aac1\";\"aws:ec2:vpc,Subnets\"=\"subnet-0f1a6046\"",
+    "solution-stack"       : "64bit Amazon Linux 2 v2.2.10 running .NET Core",
+    "environment-type"     : "SingleInstance",
+    "cname"                : "awsserviceselasticbeanstalk-dev",
+    "instance-type"        : "t3a.nano",
+    "key-pair"             : "",
+    "instance-profile"     : "aws-elasticbeanstalk-ec2-role",
+    "service-role"         : "aws-elasticbeanstalk-service-role",
+    "proxy-server"         : "nginx"
+}

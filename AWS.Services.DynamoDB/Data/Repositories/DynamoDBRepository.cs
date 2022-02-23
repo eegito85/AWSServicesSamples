@@ -4,6 +4,7 @@ using AWS.Services.DynamoDB.Data.DataModels;
 using AWS.Services.DynamoDB.Data.Repositories.Interfaces;
 using AWS.Services.DynamoDB.Models;
 using AutoMapper;
+using Amazon.DynamoDBv2.Model;
 
 namespace AWS.Services.DynamoDB.Data.Repositories
 {
@@ -21,12 +22,20 @@ namespace AWS.Services.DynamoDB.Data.Repositories
         public async Task<List<MessageModelDTO>> GetAllMessages()
         {
             var scanConditions = new List<ScanCondition>();
-            var allDocs = await _dynamoDBContext.ScanAsync<MessageModel>(scanConditions).GetRemainingAsync();
-            var listAllDocs = allDocs.ToList(); 
+            try
+            {
+                var allDocs = await _dynamoDBContext.ScanAsync<MessageModel>(scanConditions).GetRemainingAsync();
+                var listAllDocs = allDocs.ToList();
 
-            var allDocsDTO = _mapper.Map<List<MessageModel>, List<MessageModelDTO>>(listAllDocs);
+                var allDocsDTO = _mapper.Map<List<MessageModel>, List<MessageModelDTO>>(listAllDocs);
 
-            return allDocsDTO;
+                return allDocsDTO;
+            }
+            catch (Exception ex)
+            {
+                throw new ResourceNotFoundException(ex.Message);
+            }
+            
         }
 
         public async Task<List<string>> GetThreadMessages(string thread)
