@@ -22,6 +22,7 @@ namespace AWS.Services.DynamoDB.Data.Repositories
         public async Task<List<MessageModelDTO>> GetAllMessages()
         {
             var scanConditions = new List<ScanCondition>();
+
             try
             {
                 var allDocs = await _dynamoDBContext.ScanAsync<MessageModel>(scanConditions).GetRemainingAsync();

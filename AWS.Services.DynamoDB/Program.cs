@@ -31,8 +31,8 @@ IMapper mapper = mapConfig.CreateMapper();
 IMapper mapper2 = mapConfig1.CreateMapper();
 builder.Services.AddSingleton(mapper);
 builder.Services.AddSingleton(mapper2);
-builder.Services.AddSingleton<IDynamoDBRepository, DynamoDBRepository>();
-builder.Services.AddSingleton<IDynamoDBService, DynamoDBService>();
+builder.Services.AddTransient<IDynamoDBRepository, DynamoDBRepository>();
+builder.Services.AddTransient<IDynamoDBService, DynamoDBService>();
 
 var app = builder.Build();
 
